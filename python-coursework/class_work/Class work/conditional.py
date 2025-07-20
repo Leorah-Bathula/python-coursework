@@ -81,4 +81,29 @@ if movie in movies:
 else:
     print(f"{movie} is not availble")
     
-        
+
+'''  1. Positive or Negative
+● Input: 5
+● Output: Positive number  '''
+num = int(input("Enter a number: "))
+if num > 0:
+    print("Positive number")
+
+elif num < 0:
+    print("Negative number")
+    
+else:
+    print("Zero")
+
+
+''' 2. Even or Odd
+● Input: 8
+● Output: Even number
+'''
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+
+    
