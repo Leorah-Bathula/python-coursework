@@ -106,4 +106,122 @@ if num % 2 == 0:
 else:
     print("Odd number")
 
-    
+
+'''
+3. Divisible by 5
+● Input: 15
+● Output: Divisible by 5
+'''
+num = int(input("Enter a number: "))
+if num % 5 == 0:
+    print("Divisible by 5")
+else:
+    print("Not divisible by 5")
+
+'''
+4. Divisible by 3 and 7
+● Input: 21
+● Output: Divisible by both 3 and 7
+
+'''
+num = int(input("Enter a number: "))
+if num % 3 == 0 and num % 7 == 0:
+    print("Divisible by both 3 and 7")
+else:
+    print("Not divisible by both 3 and 7")
+
+'''
+5. Check for Leap Year
+● Input: 2024
+● Output: Leap year
+'''
+year = int(input("Enter a year: "))
+
+if year % 400 == 0:
+  print("Leap Year")
+
+elif year % 100 == 0 :
+  print("Not a leap year")
+
+elif year % 4 == 0:
+  print("Leap year")
+
+else:
+  print("Not a leap year")
+
+  '''
+  6. Check Pass or Fail (Passing marks = 35)
+● Input: 40
+● Output: Pass
+  '''
+  n = int(input("Enter a number: "))
+if n >= 35:
+    print("Pass")
+else:
+    print("Fail")
+
+'''
+7. Check if number is 3-digit
+● Input: 123
+● Output: 3-digit number
+'''
+n = input("Enter a number: ")
+print(len(n))
+
+if (len(n) == 3):
+    print(f"{n} is a 3-digit number")
+else:
+    print(f"{n} is not a 3-digit number")
+
+# But if the user enters a negative number, like -45, then len(n) will be 3 ('-45') — which is wrong logically.
+n = int(input("Enter a number: "))
+if 100 <= abs(n) <= 999:
+    print(f"{n} is a 3-digit number")
+else:
+    print(f"{n} is not a 3-digit number")    
+
+'''
+8. Check if character is vowel
+● Input: a
+● Output: Vowel
+'''
+n = input("Enter a character: ")
+
+vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+if n in vowels:
+    print("Vowel")
+else:
+    print("Not vowel")
+
+'''
+9. Check greatest of two numbers
+● Input: 7, 9
+● Output: 9 is greater
+'''
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a > b:
+    print(f"{a} is greater")
+elif b > a:
+    print(f"{b} is greater")
+else:
+    print("Both numbers are equal")
+
+'''
+10. Check smallest of two numbers
+● Input: 3, 8
+● Output: 3 is smaller
+'''
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a < b:
+    print(f"{a} is smaller")
+elif b < a:
+    print(f"{b} is smaller")
+else:
+    print("Both numbers are equal")
+
+
+
