@@ -223,5 +223,73 @@ elif b < a:
 else:
     print("Both numbers are equal")
 
+'''
+11. Check if number is zero
+● Input: 0
+● Output: Number is zero
+'''
+
+n = int(input("Enter a number: "))
+if n == 0:
+    print("Number is Zero")
+else:
+    print("NUmber is not zero")
+
+'''
+12. Check if number is multiple of 10
+● Input: 50
+● Output: Multiple of 10
+'''    
+n = int(input("Enter a number: "))
+if n % 10 == 0:
+    print("Multiple of 10")
+else:
+    print("Not Multiple of 10")
+
+'''
+13. Check if age is eligible to vote (18+)
+● Input: 19
+● Output: Eligible to vote
+'''  
+age = int(input("Enter a number: "))
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not Eligible to vote")
+
+'''
+14. Check if number is between 1 and 100
+● Input: 45
+● Output: In range
+'''    
+n = int(input("Enter a number: "))
+
+if n >= 1 and n <= 100:
+    print("In range")
+else:
+    print("Not in range")
+
+
+'''
+15. Check if number is square of another
+● Input: 4, 2
+● Output: 4 is square of 2
+'''
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a == b ** 2:
+    print(f"{a} is square of {b}")
+elif b == a ** 2:
+    print(f"{b} is square of {a}")
+else:
+    print("Neither number is a square of the other")
+
+'''
+16. Check if two strings are equal
+● Input: "apple", "apple"
+● Output: Strings are equal
+'''    
+
 
 
