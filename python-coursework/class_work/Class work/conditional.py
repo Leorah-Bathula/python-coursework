@@ -290,6 +290,42 @@ else:
 ● Input: "apple", "apple"
 ● Output: Strings are equal
 '''    
+# Seat booking 
+seats={
+    "U1":{'price':1030,'booking_status':True},
+    "U2":{'price':1030,'booking_status':False},
+    "U3":{'price':1030,'booking_status':False},
+    "U4":{'price':1030,'booking_status':True},
+    "U5":{'price':1030,'booking_status':False},
+    "L1":{'price':1030,'booking_status':True},
+    "L2":{'price':1030,'booking_status':False},
+    "L3":{'price':1030,'booking_status':False},
+    "L4":{'price':1030,'booking_status':True},
+    "L5":{'price':1030,'booking_status':False}
+}
+for i in seats:
+    if seats[i]['booking_status']:
+        print(f'***{i}***')
+    else:
+        print(f'{i}-{seats[i]["price"]}')
+seatno=input("Enter the seatno: ").upper()
+if seatno in seats:
+    if seats[seatno]['booking_status']:
+        print(f'{seatno} is booked. Go for another one.')
+    else:
+        name=input("Enter name: ")
+        age=int(input("Enter age: "))
+        gender=input("Enter gender: ").upper
+        if age<=5:
+            print(f'Hello {name} your booking is succesfull with free of cost')
+        elif age<15:
+            print(f'Hello {name} your booking is succesfull with 50% discount\nTotal amount={seats[seatno]["price"]*0.5}')
+        else:
+            print(f'Hello {name} your seat is booked succesfully. Pay the full amount-{seats[i]["price"]}')
+        print(f'{name} {age} {gender}')
+else:
+    print("Enter correct seatno: ")
+
 
 
 
