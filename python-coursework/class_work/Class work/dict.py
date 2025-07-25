@@ -80,3 +80,96 @@ students = {
 }
 print(students["Alice"]["course"]) # Output: CS
 
+# 1. Add Multiple Key-Value Pairs at Once
+student = {"name":"leorah"}
+student.update({"age":22,"course":"AI","college":"Anurag University"})
+print(student)
+# output : {'name': 'Jessie', 'age': 22, 'course': 'AI', 'college': 'Anurag University'}
+
+#  2. Store Multiple Values Under One Key (using a list)
+student = {"skills":["python","SQL","AI"]}
+student["skills"].append("Machine Learning")
+print(student)
+
+# To keep everything in one dictionary 
+student = {"name" : "leorah"}
+student.update({"age":22,"course":"AI","college":"Anurag University"})
+
+# Add skills key with multiple values 
+student["skills"] = ["python","SQL","AI"]
+
+#Add more skills 
+student["skills"].append("Machine learning")
+
+#print the whole dictionsary
+print(student)
+
+'''
+output:
+{
+  'name': 'leorah',
+  'age': 22,
+  'course': 'AI',
+  'college': 'Anurag University',
+  'skills': ['python', 'SQL', 'AI', 'Machine Learning']
+}
+
+'''
+
+#3. Loop to Add Multiple Items Dynamically
+data = {}
+
+for i in range(3):
+    key = input("Enter key: ")
+    value = int(input("Enter a value: "))
+    data[key] = value
+
+print(data)    
+
+# 4. Dictionary of Lists (Multiple values for multiple keys)
+student = {
+    "name" : ["Jessi","Ales"],
+    "age" : [22,21],
+    "course" : ["AI","DS"]
+}
+
+student["name"].append("Riya")
+print(student)
+# O/P : {'name': ['Jessie', 'Alex', 'Riya'], 'age': [22, 21], 'course': ['AI', 'DS']}
+
+'''
+GOAL   ---->   WHAT TO USE
+Add several key-value pairs --->  dict.update() or merging
+One key , many values ---> Use a list as the value 
+Dynamically build dictionary --> Loop + dict[key] = value 
+
+'''
+
+# Dictionary Comprehensioon 
+# You can create dictionaries dynamically using dictionary comprehension.
+
+squares = {x: x*x for x in range(1,6)}
+print(squares)  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# Problem 1: Count the Frequency of Words in a Sentence
+sen = "hello world hello python"
+word_count = {}
+
+for word in sen.split():
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+print(word_count)        
+# # Output: {'hello': 2, 'world': 1, 'python': 1}
+
+# Problem 2: Find the Student with the Highest Marks
+students = {
+"Alice": 85,
+"Bob": 92,
+"Charlie": 88
+}
+
+top_student = max(students, key = students.get)
+print(top_student) #Bob
+
