@@ -458,6 +458,180 @@ else:
 Input: 2000
 Output: Century leap year
 '''
+year = int(input("Enter a year: "))
+if year % 100 == 0:
+    if year % 400 == 0:
+        print("Century leap year")
+    else:
+        print("Century non-leap year")
+        
+else:
+    if year % 4 == 0:
+        print("Non-century leap year")
+    else:
+        print("Non-century non-leap year")
+
+'''
+9. Check if a character is a digit
+Input: "5"
+Output: Digit
+'''        
+n = input("Enter a char: ")
+if n.isdigit():
+    print("Digit")
+else:
+    print("Not digit")
+
+'''
+10. Check if a number is palindrome (integer)
+Input: 121
+Output: Palindrome number
+'''
+n = int(input("Enter a number: "))
+
+rev = int(str(n)[::-1])
+
+if n == rev:
+    print("Palindrome number")
+else:
+    print("Not palindrome")
+
+
+'''
+11. Compare lengths of two strings
+Input: "cat", "mouse"
+Output: Second string is longer
+'''
+n1 = input("Enter string1: ")
+n2 = input("Enter string2: ")
+
+if len(n1) > len(n2):
+    print("First string is longer")
+elif len(n1) == len(n2):
+    print("Both strings are equal in length")
+else:
+    print("Second string is longer")
+
+'''
+12. Check if a number is within a specific range (50 to 100) and divisible by 5
+Input: 75
+Output: In range and divisible by 5
+'''
+n = int(input("Enter a number: "))
+
+if n >= 50 and n <= 100 and n % 5 == 0:
+    print("In range and divisible by 5")
+else:
+    print("Not in range or not divisible by 5")
+
+'''
+13. Validate if a password length is strong (8 or more characters)
+Input: "secure123"
+Output: Strong password
+'''
+n = input("Enter the password: ")
+
+if len(n) >= 8:
+    print("Strong password")
+else:
+    print("Weak password")
+
+
+'''
+14. Check if sum of two numbers is even
+Input: 12, 16
+Output: Sum is even
+'''
+n1 = int(input("Enter num1: "))
+n2 = int(input("Enter num2: "))
+
+if (n1 + n2) % 2 == 0:
+    print("Sum is even")
+else:
+    print("Sum is odd")
+
+'''
+15. Check if the character is a special symbol (!, @, #, etc.)
+Input: "@"
+Output: Special character
+'''
+n = input("Enter a char: ")
+
+if not n.isalnum():
+    print("Special character")
+else:
+    print("Not a special character")
+
+'''
+16. Check if temperature is cold (<15°C), moderate (15–30°C), or hot (>30°C)
+Input: 10
+Output: Cold
+'''
+temp = int(input("Enter the temperature in °C: "))
+
+if temp < 15:
+    print("Cold")
+elif temp <= 30:
+    print("Moderate")
+else:
+    print("Hot")
+
+'''
+17. Check if a number lies outside the range 10 to 50
+Input: 55
+Output: Outside the range
+'''
+n = int(input("Enter a number: "))
+
+if n < 10 or n > 50:
+    print("Outside the range")
+else:
+    print("Within the range")
+
+'''
+18. Check if number is a perfect square (basic method)
+Input: 36
+Output: Perfect square
+'''
+n = int(input("Enter a number: "))
+
+# Check if square root is an integer
+if int(n ** 0.5) ** 2 == n:
+    print("Perfect square")
+else:
+    print("Not a perfect square")
+
+'''
+19. Compare two ages and determine who is older or if same age
+Input: 22, 25
+Output: Second person is older
+'''
+age1 = int(input("Enter age of person 1: "))
+age2 = int(input("Enter age of person 2: "))
+
+if age1 > age2:
+    print("First person is older")
+elif age1 < age2:
+    print("Second person is older")
+else:
+    print("Both are of the same age")
+
+'''
+20. Check if an angle is acute, right, or obtuse
+Input: 90
+Output: Right angle
+'''
+angle = int(input("Enter the angle in degrees: "))
+
+if angle < 90:
+    print("Acute angle")
+elif angle == 90:
+    print("Right angle")
+elif angle < 180:
+    print("Obtuse angle")
+else:
+    print("Invalid angle")
+
 
 
 
