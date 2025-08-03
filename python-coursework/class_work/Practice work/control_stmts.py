@@ -386,6 +386,129 @@ Problem: Write a program to check if a number is perfect using a for loop.
 ● Input: An integer N
 ● Output: "Perfect" if the number is perfect, "Not Perfect" otherwise.
 '''
+n = int(input())
+sum_of_divisors = 0
+
+for i in range(1, n):
+    if n % i == 0:
+        sum_of_divisors += i
+
+if sum_of_divisors == n:
+    print("Perfect")
+else:
+    print("Not Perfect")
+
+'''
+24. Count Digits in a Number (Using while loop)
+Problem: Write a program to count the number of digits in a number using a while loop.
+● Input: An integer n
+● Output: Count of digits in n.
+'''
+n = int(input())
+num_of_digits = 0
+
+if n == 0:
+    num_of_digits = 1
+    
+else:
+    while n > 0:
+        n //= 10
+        num_of_digits += 1
+print(num_of_digits)        
+    
+
+'''
+25. Print Numbers Divisible by 7 (Using for loop)
+Problem: Write a program to print all numbers divisible by 7 up to N using a for loop.
+● Input: An integer N
+● Output: Numbers divisible by 7 up to N.
+''' 
+n = int(input())
+
+for i in range(1, n + 1):
+    if i % 7 == 0:
+        print(i)
+
+
+'''
+26. Find the LCM of Two Numbers (Using while loop)
+Problem: Write a program to find the Least Common Multiple (LCM) of two numbers using a
+while loop.
+● Input: Two integers a and b
+● Output: LCM of a and b.
+'''
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+lcm = max(a, b)  # Start from the bigger number
+
+while True:
+    if lcm % a == 0 and lcm % b == 0:
+        print("LCM:", lcm)
+        break
+    lcm += 1
+
+'''
+27. Print Even Numbers in Reverse Order (Using while loop)
+Problem: Write a program to print even numbers from N down to 1 using a while loop.
+● Input: An integer N
+● Output: Even numbers from N to 1.
+'''
+n = int(input())
+
+while n >= 1:
+    if n % 2 == 0:
+        print(n)
+    n -= 1
+
+'''
+28. Sum of First N Odd Numbers (Using for loop)
+Problem: Write a program to calculate the sum of the first N odd numbers using a for loop.
+● Input: An integer N
+● Output: Sum of the first N odd numbers.
+'''
+n = int(input("Enter N: "))
+sum_of_odds = 0
+
+for i in range(1, 2*n, 2):
+    sum_of_odds += i
+
+print("Sum of first", n, "odd numbers is:", sum_of_odds)
+
+
+'''
+29. Print a Square Pattern of Numbers (Using for loop)
+Problem: Write a program to print a square pattern of numbers from 1 to N using a for loop.
+● Input: An integer N
+Output: A square pattern of numbers.
+
+'''
+n = int(input())
+
+for i in range(n):
+    for j in range(1, n + 1):
+        print(j, end=" ")
+    print()
+
+
+'''
+30. Check if a Number is Armstrong (Using for loop)
+Problem: Write a program to check if a number is an Armstrong number using a for loop.
+● Input: An integer n
+● Output: "Armstrong" or "Not Armstrong".
+'''
+n = int(input("Enter a number: "))
+num_str = str(n)
+num_digits = len(num_str)
+sum_of_powers = 0
+
+for digit in num_str:
+    sum_of_powers += int(digit) ** num_digits
+
+if sum_of_powers == n:
+    print("Armstrong")
+else:
+    print("Not Armstrong")
 
 
 
