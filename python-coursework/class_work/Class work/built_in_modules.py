@@ -153,5 +153,65 @@ Le,Lo,Lr,La,Lh,eL,eo,er,ea,eh,oL,oe,or,oa,oh,rL,re,ro,ra,rh,aL,ae,ao,ar,ah,hL,he
 
 
 '''
+from collections import deque,defaultdict,Counter
 
+s = "Hello world Python Program"
+d = {}
+for i in s:
+    if i in d:
+        d[i] += 1
+    else:    
+        d[i] = 1
+print(d)
+
+freq = Counter(s) # Counter how many times the letter is repeating
+print(freq)
+
+'''{'H': 1, 'e': 1, 'l': 3, 'o': 4, ' ': 3, 'w': 1, 'r': 3, 'd': 1, 'P': 2, 'y': 1, 't': 1, 'h': 1, 'n': 1, 'g': 1, 'a': 1, 'm': 1}
+Counter({'o': 4, 'l': 3, ' ': 3, 'r': 3, 'P': 2, 'H': 1, 'e': 1, 'w': 1, 'd': 1, 'y': 1, 't': 1, 'h': 1, 'n': 1, 'g': 1, 'a': 1, 'm': 1})'''
+
+from collections import deque,defaultdict,Counter
+
+s = [1,2,3,4,5,6,7,8,9,1,2,3,4,4]
+
+freq = Counter(s) # Counter how many times the letter is repeating
+print(freq)
+
+'''
+Counter({4: 3, 1: 2, 2: 2, 3: 2, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1})
+'''
+from collections import deque,defaultdict,Counter
+
+s = [1,2,3,4,5,6,7,8,9,1,2,3,4,4]
+d = defaultdict(int)
+d[1] = d[1] + 1
+print(d)
+
+'''
+defaultdict(<class 'int'>, {1: 1})
+'''
+
+from collections import deque,defaultdict,Counter
+
+s = [1,2,3,4,5,6,7,8,9,1,2,3,4,4]
+
+d = defaultdict(int)
+for i in s:
+    d[i] += 1
+print(d)
+
+# defaultdict(<class 'int'>, {1: 2, 2: 2, 3: 2, 4: 3, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1})
+
+# deque
+from collections import deque,defaultdict,Counter
+
+d = deque()
+d.appendleft(12)
+d.pop()
+
+d.append(12)
+d.popleft()
+
+print(d)
+# deque([])
 
